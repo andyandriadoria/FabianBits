@@ -5,14 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Fabian Lab</title>
 
-  <!-- Google Font mirip KooBits -->
+  <!-- Google Font -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
 
   <style>
     :root {
-      /* Palet ala KooBits */
       --kb-blue-dark: #0069b8;
       --kb-blue: #00a4ff;
       --kb-blue-soft: #e3f5ff;
@@ -64,42 +63,10 @@
       box-shadow: var(--shadow-soft);
       border: 1px solid rgba(255, 255, 255, 0.25);
       backdrop-filter: blur(12px);
+      position: relative;
     }
-.input-answer-row {
-  display: none;
-  flex-direction: column;
-  gap: 10px;
-  margin-bottom: 10px;
-}
 
-.input-group {
-  display: flex;
-  flex-direction: column;
-}
-
-.input-group label {
-  font-size: 12px;
-  font-weight: 700;
-  color: #1565c0;
-  margin-bottom: 4px;
-}
-
-.input-group input {
-  border-radius: 10px;
-  padding: 8px 12px;
-  border: 2px solid #e3f2fd;
-  background: #f9fbff;
-  outline: none;
-  font-size: 13px;
-  color: var(--text-main);
-}
-
-.input-group input:focus {
-  border-color: #00a4ff;
-  box-shadow: 0 0 0 1px rgba(33,150,243,0.4);
-}
-
-    /* Top bar ala KooBits */
+    /* Top bar */
     .top-bar {
       display: flex;
       align-items: center;
@@ -139,7 +106,7 @@
       display: flex;
       align-items: center;
       gap: 16px;
-      font-size: 14px;
+      font-size: 13px;
     }
 
     .top-nav span {
@@ -153,10 +120,6 @@
     .top-nav span.active {
       opacity: 1;
       font-weight: 700;
-    }
-
-    .top-nav span.icon {
-      font-size: 18px;
     }
 
     .top-right {
@@ -174,7 +137,7 @@
       border-radius: 999px;
       background: #ff7043;
       color: #fff;
-      font-size: 14px;
+      font-size: 12px;
     }
 
     .avatar-mini {
@@ -189,7 +152,7 @@
       box-shadow: 0 4px 10px rgba(0,0,0,0.3);
     }
 
-    /* Main content layout */
+    /* Main layout */
     .app-main {
       padding: 18px 22px 22px;
       display: grid;
@@ -198,7 +161,7 @@
       background: radial-gradient(circle at top, #3ab8ff 0, #0588d4 40%, #0367a4 100%);
     }
 
-    /* Sidebar kiri: menu besar */
+    /* Sidebar */
     .side-menu {
       display: flex;
       flex-direction: column;
@@ -267,7 +230,7 @@
 
     .xp-level {
       margin-top: 4px;
-      font-size: 11px;
+      font-size: 12px;
       padding: 2px 6px;
       border-radius: 999px;
       background: #00c853;
@@ -282,7 +245,6 @@
       display: flex;
       align-items: center;
       gap: 10px;
-      cursor: default;
     }
 
     .side-tile-icon {
@@ -312,14 +274,14 @@
       color: var(--muted);
     }
 
-    /* Right main area */
+    /* Main col */
     .main-col {
       display: flex;
       flex-direction: column;
       gap: 16px;
     }
 
-    /* Hero Daily Challenge */
+    /* Hero */
     .hero-daily {
       background: #ffce32;
       border-radius: var(--radius-xl);
@@ -345,7 +307,7 @@
     }
 
     .hero-text h1 {
-      font-size: 28px;
+      font-size: 22px;
       font-weight: 900;
       letter-spacing: 0.03em;
       color: #c05d00;
@@ -374,7 +336,7 @@
     }
 
     .hero-trophy {
-      font-size: 50px;
+      font-size: 42px;
       filter: drop-shadow(0 4px 6px rgba(199, 125, 0, 0.5));
     }
 
@@ -383,7 +345,7 @@
       border: none;
       border-radius: 999px;
       padding: 9px 18px;
-      font-size: 16px;
+      font-size: 13px;
       font-weight: 800;
       cursor: pointer;
       background: linear-gradient(135deg, #ff8a3d, #ff5722);
@@ -408,7 +370,7 @@
       box-shadow: 0 7px 14px rgba(204, 96, 0, 0.6);
     }
 
-    /* Controls dropdown tampil simple seperti pill */
+    /* Controls */
     .controls-row {
       display: flex;
       flex-wrap: wrap;
@@ -451,7 +413,7 @@
       color: #000;
     }
 
-    /* Empty state & quiz card */
+    /* Empty state */
     .empty-state {
       margin-top: 10px;
       padding: 14px 16px;
@@ -476,6 +438,7 @@
       font-size: 22px;
     }
 
+    /* Quiz card */
     .quiz-card {
       margin-top: 10px;
       padding: 14px 16px 16px;
@@ -568,12 +531,26 @@
       transition: width 0.25s ease-out;
     }
 
-    /* Question text & options */
     .question-text {
       font-size: 15px;
       font-weight: 700;
       color: var(--text-main);
-      margin-bottom: 10px;
+      margin-bottom: 6px;
+    }
+
+    /* Gambar soal */
+    .question-image {
+      margin: 4px 0 10px;
+      text-align: center;
+      display: none;
+    }
+
+    .question-image img {
+      max-width: 100%;
+      max-height: 230px;
+      border-radius: 14px;
+      box-shadow: 0 6px 14px rgba(0, 0, 0, 0.18);
+      background: #ffffff;
     }
 
     .options {
@@ -693,7 +670,7 @@
       cursor: default;
     }
 
-    /* Feedback & bottom actions */
+    /* Feedback */
     .feedback-row {
       display: flex;
       justify-content: space-between;
@@ -755,80 +732,111 @@
       cursor: default;
     }
 
-    /* Result card */
+    /* Result card (backup, tidak dipakai tampilan utama) */
     .result-card {
-      margin-top: 10px;
-      padding: 16px 16px 16px;
-      border-radius: var(--radius-lg);
-      background: linear-gradient(135deg, #66bb6a, #aed581);
-      color: #1b5e20;
-      box-shadow: var(--shadow-soft);
+      display: none;
     }
 
-    .result-header {
-      display: flex;
-      justify-content: space-between;
-      gap: 12px;
-      margin-bottom: 10px;
+    /* === MODAL HASIL NILAI === */
+    .modal-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.55);
+      display: none;
+      justify-content: center;
       align-items: center;
+      z-index: 999;
     }
 
-    .result-main h2 {
+    .modal-box {
+      background: #ffffff;
+      padding: 24px 26px 22px;
+      border-radius: 24px;
+      max-width: 420px;
+      width: 90%;
+      text-align: center;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+      position: relative;
+    }
+
+    .modal-icon {
+      font-size: 42px;
+      margin-bottom: 6px;
+    }
+
+    .modal-title {
       font-size: 18px;
-      display: flex;
-      align-items: center;
-      gap: 8px;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #1565c0;
+      margin-bottom: 4px;
+    }
+
+    .modal-score {
+      font-size: 72px;
       font-weight: 900;
+      line-height: 1;
+      color: #ff6f00;
+      margin: 6px 0 4px;
     }
 
-    .result-main h2 span.icon {
-      font-size: 26px;
+    .modal-score span {
+      font-size: 30px;
+      vertical-align: top;
+      margin-left: 4px;
     }
 
-    .result-main p {
+    .modal-sub {
       font-size: 13px;
-      color: #234d20;
+      color: #455a64;
+      margin-bottom: 10px;
     }
 
-    .result-score {
-      text-align: right;
-      font-size: 13px;
-      color: #1b5e20;
-      font-weight: 700;
+    .modal-sub span.tag {
+      font-weight: 800;
+      color: #2e7d32;
     }
 
-    .result-score strong {
-      font-size: 20px;
-    }
-
-    .result-details {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-      margin-top: 6px;
+    .modal-detail {
       font-size: 11px;
+      color: #607d8b;
+      margin-bottom: 14px;
     }
 
-    .chip {
-      padding: 4px 10px;
-      border-radius: 999px;
-      background: rgba(255,255,255,0.9);
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      font-weight: 700;
+    .modal-detail strong {
+      color: #37474f;
     }
 
-    .chip span.icon {
-      font-size: 14px;
-    }
-
-    .result-actions {
-      margin-top: 10px;
+    .modal-buttons {
       display: flex;
       flex-wrap: wrap;
       gap: 8px;
-      justify-content: flex-end;
+      justify-content: center;
+      margin-top: 4px;
+    }
+
+    .modal-btn-primary {
+      border-radius: 999px;
+      border: none;
+      padding: 9px 16px;
+      font-size: 12px;
+      font-weight: 800;
+      background: linear-gradient(135deg, #ff8a3d, #ff5722);
+      color: #fff;
+      cursor: pointer;
+      box-shadow: 0 6px 14px rgba(204, 96, 0, 0.7);
+    }
+
+    .modal-btn-secondary {
+      border-radius: 999px;
+      border: 1px solid #bbdefb;
+      padding: 8px 14px;
+      font-size: 12px;
+      font-weight: 700;
+      background: #ffffff;
+      color: #1565c0;
+      cursor: pointer;
     }
 
     /* Responsive */
@@ -844,20 +852,6 @@
       }
     }
 
-.question-image {
-  margin: 6px 0 10px;
-  display: none;          /* default: disembunyikan kalau nggak ada gambar */
-  text-align: center;
-}
-
-.question-image img {
-  max-width: 100%;
-  max-height: 220px;
-  border-radius: 14px;
-  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
-  background: #ffffff;
-}
-
     @media (max-width: 640px) {
       body {
         padding: 10px;
@@ -872,6 +866,12 @@
       }
       .app-main {
         padding: 14px;
+      }
+      .modal-box {
+        padding: 20px 18px 18px;
+      }
+      .modal-score {
+        font-size: 56px;
       }
     }
   </style>
@@ -896,7 +896,7 @@
     </header>
 
     <main class="app-main">
-      <!-- SIDEBAR LEFT -->
+      <!-- SIDEBAR -->
       <aside class="side-menu">
         <section class="profile-card">
           <div class="profile-avatar">🦸🏻‍♂️</div>
@@ -936,15 +936,15 @@
         </div>
       </aside>
 
-      <!-- MAIN COLUMN -->
+      <!-- MAIN COL -->
       <section class="main-col">
         <!-- HERO -->
         <section class="hero-daily">
           <div class="hero-text">
-            <h1 class="exam-title">Examination Primary Grade 1</h1>
+            <h1>Examination Primary Grade 1</h1>
             <p>Special practice for Fabian before Final Exam.</p>
             <div class="hero-meta">
-              Select the subject & number of questions below, then press
+              Pilih subject & jumlah soal di bawah, lalu tekan
               <strong>Start</strong>.
             </div>
           </div>
@@ -952,12 +952,12 @@
             <div class="hero-trophy">🏆</div>
             <button id="startBtn">
               Start
-              <span>🔆</span>
+              <span>⚡</span>
             </button>
           </div>
         </section>
 
-        <!-- CONTROL PILLS -->
+        <!-- CONTROLS -->
         <section class="controls-row" style="margin-top: 6px;">
           <div class="controls-pill">
             <label for="categorySelect">Subject</label>
@@ -972,9 +972,8 @@
           <div class="controls-pill">
             <label for="questionCountSelect">Questions</label>
             <select id="questionCountSelect">
-              <option value="5">5 (Quick)</option>
-              <option value="10" selected>10 (Standard)</option>
-              <option value="15">15 (Challenge)</option>
+              <option value="15" selected>15 (Standard)</option>
+              <option value="20">20 (Challenge)</option>
             </select>
           </div>
         </section>
@@ -998,7 +997,7 @@
                   <span id="categoryTag" class="category">Math</span>
                   <span id="questionTag">Question 1 of 10</span>
                 </div>
-                <h2 id="quizTitle">Kerjakan soal berikut dengan teliti ya, Fabian! 💪</h2>
+                <h2 id="quizTitle">Fokus sebentar, lalu kita rayakan skornya! 🎉</h2>
               </div>
               <div class="score-pill">
                 <span class="icon">⭐</span>
@@ -1017,7 +1016,6 @@
             </div>
 
             <div class="question-text" id="questionText"></div>
- 
             <div class="question-image" id="questionImageContainer"></div>
 
             <div class="options" id="optionsContainer"></div>
@@ -1025,7 +1023,7 @@
             <!-- INPUT (1 atau 3 kolom) -->
             <div class="input-answer-row" id="inputContainer">
               <div class="input-group" id="group1">
-                <label id="label1">Answer</label>
+                <label id="label1">Jawaban</label>
                 <input type="text" id="input1" autocomplete="off" />
               </div>
               <div class="input-group" id="group2">
@@ -1049,23 +1047,22 @@
             </div>
           </section>
 
-
-          <!-- RESULT CARD -->
-          <section class="result-card" id="resultCard" style="display:none;">
+          <!-- RESULT CARD (backup, tidak dipakai langsung) -->
+          <section class="result-card" id="resultCard">
             <div class="result-header">
               <div class="result-main">
                 <h2>
                   <span class="icon" id="emojiResult">🏆</span>
-                  <span id="resultTitle">Keren, Fabian!</span>
+                  <span id="resultTitle">Keren, Ubaid!</span>
                 </h2>
                 <p id="resultMessage">
-                  Kamu sudah menyelesaikan semua soal. Lihat skor dan ulangi kalau mau naik level lagi.
+                  Kamu sudah menyelesaikan semua soal.
                 </p>
               </div>
               <div class="result-score">
                 Total Score<br />
                 <strong><span id="resultScore">0</span></strong>
-                <span style="font-size:12px;">/ <span id="resultMaxScore">10</span></span>
+                <span style="font-size:12px;">/ <span id="resultMaxScore">100</span></span>
               </div>
             </div>
 
@@ -1094,16 +1091,41 @@
 
             <div class="result-actions">
               <button class="secondary outline" id="backToStartBtn">
-                🔁 Kembali ke Daily Challenge
+                🔁 Back to Final Exam
               </button>
               <button class="secondary" id="retryBtn">
-                🔄 Ulangi sesi ini
+                🔄 Retry this session
               </button>
             </div>
           </section>
         </section>
       </section>
     </main>
+
+    <!-- MODAL NILAI AKHIR -->
+    <div class="modal-overlay" id="resultModal">
+      <div class="modal-box">
+        <div class="modal-icon" id="modalEmoji">🏆</div>
+        <div class="modal-title">FINAL SCORE</div>
+        <div class="modal-score" id="modalScore">100</div>
+        <div class="modal-sub">
+          <span id="modalMessageShort">Keren banget, Ubaid!</span>
+        </div>
+        <div class="modal-detail">
+          Benar: <strong><span id="modalCorrect">0</span></strong> •
+          Salah: <strong><span id="modalWrong">0</span></strong> •
+          Dilewati: <strong><span id="modalSkipped">0</span></strong>
+        </div>
+        <div class="modal-buttons">
+          <button class="modal-btn-primary" id="modalRetryBtn">
+            🔄 Retry this session
+          </button>
+          <button class="modal-btn-secondary" id="modalCloseBtn">
+            🏠 Back to Final Exam
+          </button>
+        </div>
+      </div>
+    </div>
   </div>
 
   <script>
@@ -1118,6 +1140,1343 @@
       science: [
       ],
       english: [
+    // Q1 - Fruit & food
+  {
+    type: "choice",
+    question: "Which one is a fruit?",
+    options: ["Apple", "Chair", "Shoe", "Pencil"],
+    answerIndex: 0,
+    explanation: "Apple adalah buah, sedangkan chair, shoe, dan pencil adalah benda."
+  },
+  // Q2
+  {
+    type: "choice",
+    question: "Which one is a vegetable?",
+    options: ["Carrot", "Table", "Clock", "Ruler"],
+    answerIndex: 0,
+    explanation: "Carrot adalah sayuran."
+  },
+  // Q3
+  {
+    type: "choice",
+    question: "Which one is a drink?",
+    options: ["Milk", "Socks", "Ball", "Book"],
+    answerIndex: 0,
+    explanation: "Milk adalah minuman; yang lain adalah benda."
+  },
+  // Q4
+  {
+    type: "choice",
+    question: "Which one is a fruit?",
+    options: ["Banana", "Desk", "Lamp", "Door"],
+    answerIndex: 0,
+    explanation: "Banana adalah buah."
+  },
+  // Q5
+  {
+    type: "choice",
+    question: "Which one can you eat?",
+    options: ["Rice", "Eraser", "Shoe", "Bag"],
+    answerIndex: 0,
+    explanation: "Rice adalah makanan."
+  },
+  // Q6
+  {
+    type: "choice",
+    question: "Which one is a snack?",
+    options: ["Cookie", "Pillow", "Door", "Ruler"],
+    answerIndex: 0,
+    explanation: "Cookie adalah makanan ringan."
+  },
+  // Q7
+  {
+    type: "choice",
+    question: "Which one is a fruit?",
+    options: ["Orange", "Pen", "Chair", "Notebook"],
+    answerIndex: 0,
+    explanation: "Orange adalah buah."
+  },
+  // Q8
+  {
+    type: "choice",
+    question: "Which one is a vegetable?",
+    options: ["Tomato", "Spoon", "Phone", "Shoes"],
+    answerIndex: 0,
+    explanation: "Tomato adalah sayuran/buah sayur yang dimakan."
+  },
+  // Q9
+  {
+    type: "choice",
+    question: "Which one is a drink?",
+    options: ["Juice", "Desk", "Carpet", "Box"],
+    answerIndex: 0,
+    explanation: "Juice adalah minuman."
+  },
+  // Q10
+  {
+    type: "choice",
+    question: "Which one is a fruit?",
+    options: ["Grapes", "Bed", "Pen", "Plate"],
+    answerIndex: 0,
+    explanation: "Grapes adalah buah."
+  },
+
+  // Q11 - Animals & abilities
+  {
+    type: "choice",
+    question: "Which animal can fly?",
+    options: ["Bird", "Cat", "Dog", "Cow"],
+    answerIndex: 0,
+    explanation: "Bird dapat terbang, sedangkan hewan lain tidak."
+  },
+  // Q12
+  {
+    type: "choice",
+    question: "Which animal lives in water?",
+    options: ["Fish", "Lion", "Horse", "Tiger"],
+    answerIndex: 0,
+    explanation: "Fish adalah hewan yang hidup di air."
+  },
+  // Q13
+  {
+    type: "choice",
+    question: "Which animal can swim very well?",
+    options: ["Duck", "Sheep", "Goat", "Chicken"],
+    answerIndex: 0,
+    explanation: "Duck pandai berenang."
+  },
+  // Q14
+  {
+    type: "choice",
+    question: "Which animal can jump high?",
+    options: ["Kangaroo", "Turtle", "Snail", "Worm"],
+    answerIndex: 0,
+    explanation: "Kangaroo terkenal bisa melompat tinggi."
+  },
+  // Q15
+  {
+    type: "choice",
+    question: "Which animal has a long neck?",
+    options: ["Giraffe", "Cat", "Frog", "Mouse"],
+    answerIndex: 0,
+    explanation: "Giraffe memiliki leher yang panjang."
+  },
+  // Q16
+  {
+    type: "choice",
+    question: "Which animal can fly at night?",
+    options: ["Bat", "Rabbit", "Dog", "Cow"],
+    answerIndex: 0,
+    explanation: "Bat (kelelawar) terbang di malam hari."
+  },
+  // Q17
+  {
+    type: "choice",
+    question: "Which animal says 'woof'?",
+    options: ["Dog", "Cat", "Cow", "Duck"],
+    answerIndex: 0,
+    explanation: "Suara dog sering ditulis 'woof'."
+  },
+  // Q18
+  {
+    type: "choice",
+    question: "Which animal says 'meow'?",
+    options: ["Cat", "Horse", "Sheep", "Pig"],
+    answerIndex: 0,
+    explanation: "Cat bersuara 'meow'."
+  },
+  // Q19
+  {
+    type: "choice",
+    question: "Which animal is very slow?",
+    options: ["Turtle", "Cheetah", "Horse", "Eagle"],
+    answerIndex: 0,
+    explanation: "Turtle berjalan sangat pelan."
+  },
+  // Q20
+  {
+    type: "choice",
+    question: "Which animal lives on a farm?",
+    options: ["Cow", "Shark", "Dolphin", "Whale"],
+    answerIndex: 0,
+    explanation: "Cow biasanya hidup di farm/peternakan."
+  },
+
+  // Q21 - Objects & functions
+  {
+    type: "choice",
+    question: "What do you use to write?",
+    options: ["Pencil", "Spoon", "Plate", "Cup"],
+    answerIndex: 0,
+    explanation: "Pencil digunakan untuk menulis."
+  },
+  // Q22
+  {
+    type: "choice",
+    question: "What do you use to cut paper?",
+    options: ["Scissors", "Fork", "Bottle", "Eraser"],
+    answerIndex: 0,
+    explanation: "Scissors digunakan untuk memotong kertas."
+  },
+  // Q23
+  {
+    type: "choice",
+    question: "What do you use to read?",
+    options: ["Book", "Spoon", "Shoes", "Ruler"],
+    answerIndex: 0,
+    explanation: "Book adalah sesuatu yang dibaca."
+  },
+  // Q24
+  {
+    type: "choice",
+    question: "What do you use to drink water?",
+    options: ["Cup", "Pen", "Scissors", "Eraser"],
+    answerIndex: 0,
+    explanation: "Cup digunakan untuk minum."
+  },
+  // Q25
+  {
+    type: "choice",
+    question: "What do you use to color a picture?",
+    options: ["Crayon", "Glue", "Tape", "Keyboard"],
+    answerIndex: 0,
+    explanation: "Crayon digunakan untuk mewarnai gambar."
+  },
+  // Q26
+  {
+    type: "choice",
+    question: "What do you use to erase pencil marks?",
+    options: ["Eraser", "Plate", "Chair", "Spoon"],
+    answerIndex: 0,
+    explanation: "Eraser digunakan untuk menghapus tulisan pensil."
+  },
+  // Q27
+  {
+    type: "choice",
+    question: "What do you use to measure a line?",
+    options: ["Ruler", "Cup", "Pillow", "Ball"],
+    answerIndex: 0,
+    explanation: "Ruler digunakan untuk mengukur panjang garis."
+  },
+  // Q28
+  {
+    type: "choice",
+    question: "What do you use to clean the floor?",
+    options: ["Broom", "Pen", "Book", "Cup"],
+    answerIndex: 0,
+    explanation: "Broom digunakan untuk menyapu lantai."
+  },
+  // Q29
+  {
+    type: "choice",
+    question: "What do you use to eat soup?",
+    options: ["Spoon", "Pencil", "Eraser", "Cup"],
+    answerIndex: 0,
+    explanation: "Soup dimakan dengan spoon."
+  },
+  // Q30
+  {
+    type: "choice",
+    question: "What do you use to see the time?",
+    options: ["Clock", "Plate", "Chair", "Pencil"],
+    answerIndex: 0,
+    explanation: "Clock digunakan untuk melihat waktu."
+  },
+
+  // Q31 - Where do you sit / place usage
+  {
+    type: "choice",
+    question: "Where do you sit in the classroom?",
+    options: ["On a chair", "In the cupboard", "On the sink", "On the window"],
+    answerIndex: 0,
+    explanation: "Di kelas, kita duduk di kursi (chair)."
+  },
+  // Q32
+  {
+    type: "choice",
+    question: "Where do you sleep?",
+    options: ["In a bed", "On a desk", "In a fridge", "On a shelf"],
+    answerIndex: 0,
+    explanation: "Kita tidur di bed."
+  },
+  // Q33
+  {
+    type: "choice",
+    question: "Where do you wash your hands?",
+    options: ["At the sink", "On the sofa", "On the carpet", "In the drawer"],
+    answerIndex: 0,
+    explanation: "Tangan dicuci di sink."
+  },
+  // Q34
+  {
+    type: "choice",
+    question: "Where do you cook food?",
+    options: ["In the kitchen", "In the bedroom", "In the bathroom", "In the garage"],
+    answerIndex: 0,
+    explanation: "Makanan biasanya dimasak di kitchen."
+  },
+  // Q35
+  {
+    type: "choice",
+    question: "Where do you sit to watch TV?",
+    options: ["On the sofa", "In the wardrobe", "On the table", "On the fridge"],
+    answerIndex: 0,
+    explanation: "Orang biasanya duduk di sofa untuk menonton TV."
+  },
+  // Q36
+  {
+    type: "choice",
+    question: "Where do you brush your teeth?",
+    options: ["In the bathroom", "In the garden", "In the car", "In the gym"],
+    answerIndex: 0,
+    explanation: "Biasanya sikat gigi dilakukan di bathroom."
+  },
+  // Q37
+  {
+    type: "choice",
+    question: "Where do you eat lunch at school?",
+    options: ["In the canteen", "In the toilet", "On the stairs", "In the parking lot"],
+    answerIndex: 0,
+    explanation: "Makan siang dilakukan di canteen."
+  },
+  // Q38
+  {
+    type: "choice",
+    question: "Where do you find books at school?",
+    options: ["In the library", "In the kitchen", "In the garage", "In the bathroom"],
+    answerIndex: 0,
+    explanation: "Buku disimpan di library."
+  },
+  // Q39
+  {
+    type: "choice",
+    question: "Where do you write in class?",
+    options: ["At your desk", "On the floor", "On the wall", "On the door"],
+    answerIndex: 0,
+    explanation: "Biasanya menulis di meja (desk)."
+  },
+  // Q40
+  {
+    type: "choice",
+    question: "Where do you play football?",
+    options: ["On the field", "In the bedroom", "In the kitchen", "In the office"],
+    answerIndex: 0,
+    explanation: "Sepak bola biasanya dimainkan di field/lapangan."
+  },
+
+  // Q41 - Colours & simple facts
+  {
+    type: "choice",
+    question: "What color is the sky on a clear day?",
+    options: ["Blue", "Red", "Black", "Pink"],
+    answerIndex: 0,
+    explanation: "Langit cerah berwarna biru."
+  },
+  // Q42
+  {
+    type: "choice",
+    question: "What color is grass?",
+    options: ["Green", "Purple", "Gray", "Orange"],
+    answerIndex: 0,
+    explanation: "Rumput berwarna hijau."
+  },
+  // Q43
+  {
+    type: "choice",
+    question: "What color is milk?",
+    options: ["White", "Yellow", "Blue", "Brown"],
+    answerIndex: 0,
+    explanation: "Susu berwarna putih."
+  },
+  // Q44
+  {
+    type: "choice",
+    question: "What color is blood?",
+    options: ["Red", "Green", "Blue", "Pink"],
+    answerIndex: 0,
+    explanation: "Darah berwarna merah."
+  },
+  // Q45
+  {
+    type: "choice",
+    question: "What color are bananas when they are ripe?",
+    options: ["Yellow", "Black", "Blue", "Purple"],
+    answerIndex: 0,
+    explanation: "Pisang matang berwarna kuning."
+  },
+  // Q46
+  {
+    type: "choice",
+    question: "What color is chocolate?",
+    options: ["Brown", "Gray", "Green", "Pink"],
+    answerIndex: 0,
+    explanation: "Cokelat biasanya berwarna coklat."
+  },
+  // Q47
+  {
+    type: "choice",
+    question: "What color is most human hair?",
+    options: ["Black", "Silver", "Blue", "Green"],
+    answerIndex: 0,
+    explanation: "Umumnya rambut hitam (terutama konteks Asia)."
+  },
+  // Q48
+  {
+    type: "choice",
+    question: "What color is an orange?",
+    options: ["Orange", "Blue", "Gray", "Black"],
+    answerIndex: 0,
+    explanation: "Buah orange berwarna oranye."
+  },
+  // Q49
+  {
+    type: "choice",
+    question: "What color is a lemon?",
+    options: ["Yellow", "Brown", "Purple", "Black"],
+    answerIndex: 0,
+    explanation: "Lemon berwarna kuning."
+  },
+  // Q50
+  {
+    type: "choice",
+    question: "What color is coal?",
+    options: ["Black", "White", "Red", "Gold"],
+    answerIndex: 0,
+    explanation: "Batu bara berwarna hitam."
+  },
+
+  // Q51 - Numbers & counting
+  {
+    type: "choice",
+    question: "How many legs does a cat have?",
+    options: ["Four", "Two", "Three", "Five"],
+    answerIndex: 0,
+    explanation: "Kucing memiliki empat kaki."
+  },
+  // Q52
+  {
+    type: "choice",
+    question: "How many legs does a dog have?",
+    options: ["Four", "Six", "Two", "Eight"],
+    answerIndex: 0,
+    explanation: "Dog juga memiliki empat kaki."
+  },
+  // Q53
+  {
+    type: "choice",
+    question: "How many legs does a spider have?",
+    options: ["Eight", "Four", "Six", "Two"],
+    answerIndex: 0,
+    explanation: "Spider memiliki delapan kaki."
+  },
+  // Q54
+  {
+    type: "choice",
+    question: "How many legs does a bird have?",
+    options: ["Two", "Four", "Six", "Eight"],
+    answerIndex: 0,
+    explanation: "Bird memiliki dua kaki."
+  },
+  // Q55
+  {
+    type: "choice",
+    question: "Which number comes after 5?",
+    options: ["6", "4", "3", "2"],
+    answerIndex: 0,
+    explanation: "Urutan: 4, 5, 6. Jadi setelah 5 adalah 6."
+  },
+  // Q56
+  {
+    type: "choice",
+    question: "Which number comes after 9?",
+    options: ["10", "8", "7", "6"],
+    answerIndex: 0,
+    explanation: "Setelah 9 adalah 10."
+  },
+  // Q57
+  {
+    type: "choice",
+    question: "Which number comes after 2?",
+    options: ["3", "1", "5", "4"],
+    answerIndex: 0,
+    explanation: "Setelah 2 adalah 3."
+  },
+  // Q58
+  {
+    type: "choice",
+    question: "Which number comes after 11?",
+    options: ["12", "10", "9", "13"],
+    answerIndex: 0,
+    explanation: "Setelah 11 adalah 12."
+  },
+  // Q59
+  {
+    type: "choice",
+    question: "How many days are there in one week?",
+    options: ["7", "5", "6", "8"],
+    answerIndex: 0,
+    explanation: "Satu minggu = 7 hari."
+  },
+  // Q60
+  {
+    type: "choice",
+    question: "How many months are there in a year?",
+    options: ["12", "10", "8", "6"],
+    answerIndex: 0,
+    explanation: "Satu tahun = 12 bulan."
+  },
+
+  // Q61 - Phonics /b/
+  {
+    type: "choice",
+    question: "Which word starts with the sound /b/?",
+    options: ["Ball", "Cat", "Sun", "Pen"],
+    answerIndex: 0,
+    explanation: "Ball dimulai dengan bunyi /b/."
+  },
+  // Q62
+  {
+    type: "choice",
+    question: "Which word starts with /b/?",
+    options: ["Bag", "Dog", "Fan", "Cup"],
+    answerIndex: 0,
+    explanation: "Bag dimulai dengan /b/."
+  },
+  // Q63
+  {
+    type: "choice",
+    question: "Which word starts with /b/?",
+    options: ["Bird", "Ant", "Tree", "Chair"],
+    answerIndex: 0,
+    explanation: "Bird dimulai dengan /b/."
+  },
+  // Q64
+  {
+    type: "choice",
+    question: "Which word starts with /b/?",
+    options: ["Boat", "Soap", "Cat", "Hat"],
+    answerIndex: 0,
+    explanation: "Boat dimulai dengan /b/."
+  },
+  // Q65
+  {
+    type: "choice",
+    question: "Which word starts with /b/?",
+    options: ["Bread", "Rice", "Cake", "Tea"],
+    answerIndex: 0,
+    explanation: "Bread dimulai dengan /b/."
+  },
+
+  // Q66 - Phonics /s/
+  {
+    type: "choice",
+    question: "Which word starts with the sound /s/?",
+    options: ["Sun", "Cat", "Dog", "Pen"],
+    answerIndex: 0,
+    explanation: "Sun dimulai dengan /s/."
+  },
+  // Q67
+  {
+    type: "choice",
+    question: "Which word starts with /s/?",
+    options: ["Sand", "Milk", "Leaf", "Boat"],
+    answerIndex: 0,
+    explanation: "Sand dimulai dengan /s/."
+  },
+  // Q68
+  {
+    type: "choice",
+    question: "Which word starts with /s/?",
+    options: ["Sock", "Book", "Fan", "Tree"],
+    answerIndex: 0,
+    explanation: "Sock dimulai dengan /s/."
+  },
+  // Q69
+  {
+    type: "choice",
+    question: "Which word starts with /s/?",
+    options: ["Snake", "Tiger", "Lion", "Bear"],
+    answerIndex: 0,
+    explanation: "Snake dimulai dengan /s/."
+  },
+  // Q70
+  {
+    type: "choice",
+    question: "Which word starts with /s/?",
+    options: ["Star", "Moon", "Cloud", "Rain"],
+    answerIndex: 0,
+    explanation: "Star dimulai dengan /s/."
+  },
+
+  // Q71 - Phonics /m/
+  {
+    type: "choice",
+    question: "Which word starts with the sound /m/?",
+    options: ["Man", "Dog", "Cat", "Pen"],
+    answerIndex: 0,
+    explanation: "Man dimulai dengan /m/."
+  },
+  // Q72
+  {
+    type: "choice",
+    question: "Which word starts with /m/?",
+    options: ["Milk", "Bread", "Rice", "Egg"],
+    answerIndex: 0,
+    explanation: "Milk dimulai dengan /m/."
+  },
+  // Q73
+  {
+    type: "choice",
+    question: "Which word starts with /m/?",
+    options: ["Mouse", "Lion", "Tiger", "Bear"],
+    answerIndex: 0,
+    explanation: "Mouse dimulai dengan /m/."
+  },
+  // Q74
+  {
+    type: "choice",
+    question: "Which word starts with /m/?",
+    options: ["Monkey", "Sheep", "Cow", "Horse"],
+    answerIndex: 0,
+    explanation: "Monkey dimulai dengan /m/."
+  },
+  // Q75
+  {
+    type: "choice",
+    question: "Which word starts with /m/?",
+    options: ["Moon", "Star", "Sky", "Cloud"],
+    answerIndex: 0,
+    explanation: "Moon dimulai dengan /m/."
+  },
+
+  // Q76 - am/is/are, a/an
+  {
+    type: "choice",
+    question: "I ___ a boy.",
+    options: ["am", "is", "are", "be"],
+    answerIndex: 0,
+    explanation: "Subjek 'I' memakai 'am' → I am."
+  },
+  // Q77
+  {
+    type: "choice",
+    question: "I ___ happy.",
+    options: ["am", "is", "are", "be"],
+    answerIndex: 0,
+    explanation: "Kalimat yang benar: I am happy."
+  },
+  // Q78
+  {
+    type: "choice",
+    question: "She ___ my friend.",
+    options: ["is", "am", "are", "be"],
+    answerIndex: 0,
+    explanation: "Subjek 'she' memakai 'is'."
+  },
+  // Q79
+  {
+    type: "choice",
+    question: "He ___ tall.",
+    options: ["is", "am", "are", "be"],
+    answerIndex: 0,
+    explanation: "Subjek 'he' memakai 'is'."
+  },
+  // Q80
+  {
+    type: "choice",
+    question: "They ___ in the park.",
+    options: ["are", "am", "is", "be"],
+    answerIndex: 0,
+    explanation: "Subjek jamak 'they' memakai 'are'."
+  },
+  // Q81
+  {
+    type: "choice",
+    question: "We ___ in the classroom.",
+    options: ["are", "am", "is", "be"],
+    answerIndex: 0,
+    explanation: "We are in the classroom."
+  },
+  // Q82
+  {
+    type: "choice",
+    question: "This is ___ apple.",
+    options: ["an", "a", "the", "no"],
+    answerIndex: 0,
+    explanation: "Apple diawali bunyi vokal /a/, jadi 'an apple'."
+  },
+  // Q83
+  {
+    type: "choice",
+    question: "This is ___ cat.",
+    options: ["a", "an", "the", "no"],
+    answerIndex: 0,
+    explanation: "Cat diawali bunyi konsonan /k/, jadi 'a cat'."
+  },
+  // Q84
+  {
+    type: "choice",
+    question: "That is ___ umbrella.",
+    options: ["an", "a", "the", "no"],
+    answerIndex: 0,
+    explanation: "Umbrella diawali bunyi vokal /ʌ/, jadi 'an umbrella'."
+  },
+  // Q85
+  {
+    type: "choice",
+    question: "She ___ a student.",
+    options: ["is", "am", "are", "be"],
+    answerIndex: 0,
+    explanation: "She is a student."
+  },
+
+  // Q86 - Short reading: the dog is big, etc.
+  {
+    type: "choice",
+    question: "“The dog is big.” What is big?",
+    options: ["The dog", "The cat", "The bird", "The fish"],
+    answerIndex: 0,
+    explanation: "Kalimat tersebut menyebut 'The dog is big'."
+  },
+  // Q87
+  {
+    type: "choice",
+    question: "“The cat is small.” What is small?",
+    options: ["The cat", "The dog", "The cow", "The goat"],
+    answerIndex: 0,
+    explanation: "Yang small adalah cat."
+  },
+  // Q88
+  {
+    type: "choice",
+    question: "“The bird is loud.” What is loud?",
+    options: ["The bird", "The snake", "The fish", "The turtle"],
+    answerIndex: 0,
+    explanation: "Yang bersuara keras (loud) adalah bird."
+  },
+  // Q89
+  {
+    type: "choice",
+    question: "“The boy is running.” Who is running?",
+    options: ["The boy", "The girl", "The baby", "The teacher"],
+    answerIndex: 0,
+    explanation: "Subjek kalimat adalah 'The boy'."
+  },
+  // Q90
+  {
+    type: "choice",
+    question: "“The girl is reading.” Who is reading?",
+    options: ["The girl", "The dog", "The father", "The baby"],
+    answerIndex: 0,
+    explanation: "Yang reading adalah 'The girl'."
+  },
+  // Q91
+  {
+    type: "choice",
+    question: "“The fish is blue.” What is blue?",
+    options: ["The fish", "The tree", "The house", "The car"],
+    answerIndex: 0,
+    explanation: "Fish dalam kalimat itu berwarna biru."
+  },
+  // Q92
+  {
+    type: "choice",
+    question: "“The flower is yellow.” What is yellow?",
+    options: ["The flower", "The grass", "The sky", "The sun"],
+    answerIndex: 0,
+    explanation: "Yang kuning adalah flower."
+  },
+  // Q93
+  {
+    type: "choice",
+    question: "“The turtle is slow.” What is slow?",
+    options: ["The turtle", "The rabbit", "The horse", "The tiger"],
+    answerIndex: 0,
+    explanation: "Yang slow adalah turtle."
+  },
+  // Q94
+  {
+    type: "choice",
+    question: "“The baby is crying.” Who is crying?",
+    options: ["The baby", "The mother", "The boy", "The doctor"],
+    answerIndex: 0,
+    explanation: "Yang crying adalah baby."
+  },
+  // Q95
+  {
+    type: "choice",
+    question: "“The teacher is smiling.” Who is smiling?",
+    options: ["The teacher", "The dog", "The cat", "The bird"],
+    answerIndex: 0,
+    explanation: "Yang tersenyum (smiling) adalah teacher."
+  },
+
+  // Q96–Q100 bonus variasi ekstra mudah
+  {
+    type: "choice",
+    question: "Which one is a body part?",
+    options: ["Hand", "Chair", "Table", "Book"],
+    answerIndex: 0,
+    explanation: "Hand adalah bagian tubuh."
+  },
+  {
+    type: "choice",
+    question: "Which one is a school object?",
+    options: ["Ruler", "Banana", "Sofa", "Plate"],
+    answerIndex: 0,
+    explanation: "Ruler adalah alat tulis di sekolah."
+  },
+  {
+    type: "choice",
+    question: "Which one is a pet?",
+    options: ["Cat", "Shark", "Whale", "Eagle"],
+    answerIndex: 0,
+    explanation: "Cat umum dipelihara sebagai pet."
+  },
+  {
+    type: "choice",
+    question: "Which one is a vehicle?",
+    options: ["Car", "Spoon", "Pillow", "Socks"],
+    answerIndex: 0,
+    explanation: "Car adalah kendaraan."
+  },
+  {
+    type: "choice",
+    question: "Which one is a toy?",
+    options: ["Ball", "Bread", "Soap", "Towel"],
+    answerIndex: 0,
+    explanation: "Ball dapat digunakan sebagai toy."
+  },
+  {
+    type: "choice",
+    question: "Nonfiction text tells facts. Which one is a fact?",
+    options: ["Cats can drive cars.", "The sun is hot.", "Fish can walk on land.", "Shoes can fly."],
+    answerIndex: 1,
+    explanation: "Kalimat 'The sun is hot.' adalah fakta yang benar."
+  },
+  {
+    type: "choice",
+    question: "Which text is nonfiction?",
+    options: ["A weather report", "A fairy tale", "A superhero comic", "A dragon story"],
+    answerIndex: 0,
+    explanation: "Weather report berisi informasi nyata tentang cuaca, jadi termasuk nonfiction."
+  },
+  {
+    type: "choice",
+    question: "Nonfiction texts are about ____.",
+    options: ["real things", "magic spells", "talking dragons", "flying castles"],
+    answerIndex: 0,
+    explanation: "Nonfiction membahas hal-hal nyata (real things)."
+  },
+  {
+    type: "choice",
+    question: "A book about planets in our solar system is a ____.",
+    options: ["nonfiction book", "joke book", "fairy tale", "song"],
+    answerIndex: 0,
+    explanation: "Buku tentang tata surya berisi fakta sains, jadi nonfiction."
+  },
+  {
+    type: "choice",
+    question: "We read nonfiction texts to ____.",
+    options: ["learn information", "do magic tricks", "sleep all day", "forget facts"],
+    answerIndex: 0,
+    explanation: "Tujuan membaca nonfiction adalah mempelajari informasi."
+  },
+  {
+    type: "choice",
+    question: "Which sentence is a fact?",
+    options: ["Dogs have four legs.", "Dogs can fly to the moon.", "Dogs are made of candy.", "Dogs are invisible."],
+    answerIndex: 0,
+    explanation: "Anjing memang berkaki empat, itu fakta."
+  },
+  {
+    type: "choice",
+    question: "A map is an example of ____.",
+    options: ["nonfiction text", "magic spell", "song lyrics", "fairy tale"],
+    answerIndex: 0,
+    explanation: "Peta memberi informasi nyata tentang tempat, termasuk nonfiction."
+  },
+  {
+    type: "choice",
+    question: "Nonfiction texts help us ____ new things.",
+    options: ["learn", "forget", "hide", "sleep"],
+    answerIndex: 0,
+    explanation: "Nonfiction membantu kita belajar hal baru."
+  },
+  {
+    type: "choice",
+    question: "A book about how plants grow is ____.",
+    options: ["nonfiction", "a dragon story", "a fairy tale", "a cartoon joke"],
+    answerIndex: 0,
+    explanation: "Buku cara tumbuhan tumbuh berisi penjelasan nyata, jadi nonfiction."
+  },
+  {
+    type: "choice",
+    question: "Which one is most likely nonfiction?",
+    options: ["A book about real animals", "A book about unicorns", "A book about talking trees", "A book about flying pigs"],
+    answerIndex: 0,
+    explanation: "Hewan nyata adalah topik nonfiction, sedangkan unicorn dan lainnya fiksi."
+  },
+  {
+    type: "choice",
+    question: "Nonfiction books usually use ____.",
+    options: ["real photos and charts", "magic wands", "spells and potions", "only drawings of dragons"],
+    answerIndex: 0,
+    explanation: "Nonfiction sering memakai foto nyata dan diagram."
+  },
+  {
+    type: "choice",
+    question: "Which sentence is a fact in a nonfiction book?",
+    options: ["The Earth goes around the sun.", "The sun is made of ice cream.", "The moon is a balloon.", "The stars are candy."],
+    answerIndex: 0,
+    explanation: "Bumi mengelilingi matahari adalah fakta sains."
+  },
+  {
+    type: "choice",
+    question: "A nonfiction book about weather can tell us about ____.",
+    options: ["rain and clouds", "flying castles", "magic carpets", "talking flowers"],
+    answerIndex: 0,
+    explanation: "Cuaca, hujan, dan awan adalah topik nonfiction."
+  },
+  {
+    type: "choice",
+    question: "Nonfiction texts are mostly ____.",
+    options: ["true", "made-up", "imaginary", "pretend"],
+    answerIndex: 0,
+    explanation: "Nonfiction berisi hal-hal yang benar (true)."
+  },
+  {
+    type: "choice",
+    question: "Which book is nonfiction?",
+    options: ["A book about the human body", "A story about a flying horse", "A fairy living in a flower", "A superhero from Mars"],
+    answerIndex: 0,
+    explanation: "Buku tentang tubuh manusia termasuk nonfiction karena menjelaskan organ nyata."
+  },
+    {
+    type: "choice",
+    question: "Fiction stories are ____.",
+    options: ["made-up", "always true", "science reports", "weather news"],
+    answerIndex: 0,
+    explanation: "Fiction adalah cerita karangan (made-up)."
+  },
+  {
+    type: "choice",
+    question: "Which is a fiction story?",
+    options: ["A fairy tale", "A math textbook", "A real map", "A weather report"],
+    answerIndex: 0,
+    explanation: "Fairy tale adalah cerita fiksi."
+  },
+  {
+    type: "choice",
+    question: "Fiction stories can have ____ animals.",
+    options: ["talking", "realistic only", "robotic only", "no"],
+    answerIndex: 0,
+    explanation: "Dalam fiksi, hewan bisa berbicara."
+  },
+  {
+    type: "choice",
+    question: "A story with magic wands and spells is ____.",
+    options: ["fiction", "nonfiction", "a science report", "a news article"],
+    answerIndex: 0,
+    explanation: "Cerita dengan sihir biasanya fiksi."
+  },
+  {
+    type: "choice",
+    question: "Fiction is written mostly to ____.",
+    options: ["entertain", "give weather data", "show real charts", "teach only facts"],
+    answerIndex: 0,
+    explanation: "Tujuan utama fiksi adalah menghibur."
+  },
+  {
+    type: "choice",
+    question: "Which setting is from a fiction story?",
+    options: ["A castle in the clouds", "A real city", "A real school", "A real hospital"],
+    answerIndex: 0,
+    explanation: "Kastil di awan adalah tempat khayalan."
+  },
+  {
+    type: "choice",
+    question: "Which character is from fiction?",
+    options: ["Cinderella", "Your real teacher", "A real doctor", "Your neighbor"],
+    answerIndex: 0,
+    explanation: "Cinderella adalah tokoh dongeng fiksi."
+  },
+  {
+    type: "choice",
+    question: "Fiction stories usually have characters and ____.",
+    options: ["events", "math problems", "weather charts", "science tables"],
+    answerIndex: 0,
+    explanation: "Cerita fiksi berisi tokoh dan peristiwa (events)."
+  },
+  {
+    type: "choice",
+    question: "A story that begins with 'Once upon a time' is usually ____.",
+    options: ["fiction", "nonfiction", "a news report", "a recipe"],
+    answerIndex: 0,
+    explanation: "Kalimat 'Once upon a time' khas cerita fiksi/dongeng."
+  },
+  {
+    type: "choice",
+    question: "Fiction stories can take place in ____ worlds.",
+    options: ["imaginary", "only real", "only on Earth", "only in school"],
+    answerIndex: 0,
+    explanation: "Fiksi bisa terjadi di dunia khayalan."
+  },
+  {
+    type: "choice",
+    question: "A superhero comic is ____.",
+    options: ["fiction", "nonfiction", "a science text", "a weather text"],
+    answerIndex: 0,
+    explanation: "Cerita superhero adalah fiksi."
+  },
+  {
+    type: "choice",
+    question: "Fiction is the opposite of ____.",
+    options: ["nonfiction", "fun", "reading", "spelling"],
+    answerIndex: 0,
+    explanation: "Nonfiction = fakta, Fiction = karangan."
+  },
+  {
+    type: "choice",
+    question: "Which story is fiction?",
+    options: [
+      "A story about a talking tree",
+      "A book about real dogs",
+      "A book about real plants",
+      "A real-life biography"
+    ],
+    answerIndex: 0,
+    explanation: "Pohon berbicara hanya ada di cerita fiksi."
+  },
+  {
+    type: "choice",
+    question: "Fiction stories often have a ____ to solve.",
+    options: ["problem", "test paper", "menu", "schedule"],
+    answerIndex: 0,
+    explanation: "Cerita fiksi biasanya punya masalah (problem) yang harus dipecahkan."
+  },
+  {
+    type: "choice",
+    question: "Which is fiction?",
+    options: ["A dragon living in a volcano", "A science report about volcanoes", "A weather forecast", "A real map of a country"],
+    answerIndex: 0,
+    explanation: "Naga yang tinggal di gunung berapi adalah tokoh fiksi."
+  },
+    {
+    type: "choice",
+    question: "Which spelling is correct?",
+    options: ["Cat", "Catt", "Katt", "Caat"],
+    answerIndex: 0,
+    explanation: "Ejaan yang benar adalah 'Cat'."
+  },
+  {
+    type: "choice",
+    question: "Which word is spelled correctly?",
+    options: ["Dogg", "Dog", "Doog", "Dgo"],
+    answerIndex: 1,
+    explanation: "Ejaan yang benar adalah 'Dog'."
+  },
+  {
+    type: "choice",
+    question: "Choose the correct spelling for the word /bʊk/.",
+    options: ["Book", "Buk", "Bock", "Boock"],
+    answerIndex: 0,
+    explanation: "Ejaan kata 'book' yang benar adalah 'Book'."
+  },
+  {
+    type: "choice",
+    question: "Which spelling is correct?",
+    options: ["Sunn", "Sun", "Suun", "Sson"],
+    answerIndex: 1,
+    explanation: "Ejaan yang benar adalah 'Sun'."
+  },
+  {
+    type: "choice",
+    question: "Choose the correct spelling for the thing you sit on.",
+    options: ["Chare", "Chair", "Chiar", "Cair"],
+    answerIndex: 1,
+    explanation: "Ejaan yang benar adalah 'Chair'."
+  },
+  {
+    type: "choice",
+    question: "Which spelling is correct for the place where you learn?",
+    options: ["Skool", "Scholl", "School", "Sckool"],
+    answerIndex: 2,
+    explanation: "Ejaan yang benar adalah 'School'."
+  },
+  {
+    type: "choice",
+    question: "Which spelling is correct for your mother?",
+    options: ["Moter", "Motherr", "Mother", "Muther"],
+    answerIndex: 2,
+    explanation: "Ejaan yang benar adalah 'Mother'."
+  },
+  {
+    type: "choice",
+    question: "Which spelling is correct?",
+    options: ["Watr", "Water", "Watter", "Waater"],
+    answerIndex: 1,
+    explanation: "Ejaan yang benar adalah 'Water'."
+  },
+  {
+    type: "choice",
+    question: "Which word is spelled correctly for feeling good?",
+    options: ["Happie", "Hapy", "Happy", "Haapy"],
+    answerIndex: 2,
+    explanation: "Ejaan yang benar adalah 'Happy'."
+  },
+  {
+    type: "choice",
+    question: "Which spelling is correct for the color?",
+    options: ["Yelow", "Yellow", "Yelllow", "Yellou"],
+    answerIndex: 1,
+    explanation: "Ejaan yang benar adalah 'Yellow'."
+  },
+  {
+    type: "choice",
+    question: "Choose the correct spelling for a plant with petals.",
+    options: ["Flouer", "Flower", "Flowr", "Flowa"],
+    answerIndex: 1,
+    explanation: "Ejaan yang benar adalah 'Flower'."
+  },
+  {
+    type: "choice",
+    question: "Which spelling is correct for the person who teaches?",
+    options: ["Techer", "Teachar", "Teacher", "Ticher"],
+    answerIndex: 2,
+    explanation: "Ejaan yang benar adalah 'Teacher'."
+  },
+  {
+    type: "choice",
+    question: "Which word is spelled correctly?",
+    options: ["Berird", "Bird", "Brrd", "Berd"],
+    answerIndex: 1,
+    explanation: "Ejaan yang benar adalah 'Bird'."
+  },
+  {
+    type: "choice",
+    question: "Which spelling is correct for a person you like?",
+    options: ["Freind", "Frend", "Friend", "Friand"],
+    answerIndex: 2,
+    explanation: "Ejaan yang benar adalah 'Friend'."
+  },
+  {
+    type: "choice",
+    question: "Which spelling is correct for a number?",
+    options: ["Too", "Tow", "Two", "Towe"],
+    answerIndex: 2,
+    explanation: "Ejaan yang benar untuk angka dua adalah 'Two'."
+  },
+    {
+    type: "choice",
+    question: "Which word is a noun?",
+    options: ["Book", "Run", "Quickly", "Blue"],
+    answerIndex: 0,
+    explanation: "'Book' adalah kata benda (noun)."
+  },
+  {
+    type: "choice",
+    question: "Which one is a noun?",
+    options: ["Apple", "Happily", "Red", "Fast"],
+    answerIndex: 0,
+    explanation: "'Apple' adalah benda (noun)."
+  },
+  {
+    type: "choice",
+    question: "Which word names a place?",
+    options: ["Park", "Running", "Tall", "Slowly"],
+    answerIndex: 0,
+    explanation: "'Park' adalah tempat (noun)."
+  },
+  {
+    type: "choice",
+    question: "Which is a noun?",
+    options: ["Dog", "Eat", "Sleep", "Softly"],
+    answerIndex: 0,
+    explanation: "'Dog' adalah kata benda."
+  },
+  {
+    type: "choice",
+    question: "Which is a noun?",
+    options: ["School", "Read", "Run", "Yellow"],
+    answerIndex: 0,
+    explanation: "'School' adalah tempat (noun)."
+  },
+  {
+    type: "choice",
+    question: "Which is a noun for a person?",
+    options: ["Teacher", "Laugh", "Cry", "Quickly"],
+    answerIndex: 0,
+    explanation: "'Teacher' adalah orang (noun)."
+  },
+  {
+    type: "choice",
+    question: "Which is a noun?",
+    options: ["Flower", "Quickly", "Loudly", "Softly"],
+    answerIndex: 0,
+    explanation: "'Flower' adalah benda (noun)."
+  },
+  {
+    type: "choice",
+    question: "Which is a noun?",
+    options: ["Pencil", "Run", "Jump", "Sing"],
+    answerIndex: 0,
+    explanation: "'Pencil' adalah benda (noun)."
+  },
+  {
+    type: "choice",
+    question: "Which word is a noun naming a person?",
+    options: ["Doctor", "Walk", "Blue", "Fast"],
+    answerIndex: 0,
+    explanation: "'Doctor' adalah orang (noun)."
+  },
+  {
+    type: "choice",
+    question: "Which is a noun?",
+    options: ["Table", "Quickly", "Happy", "Fast"],
+    answerIndex: 0,
+    explanation: "'Table' adalah benda (noun)."
+  },
+  {
+    type: "choice",
+    question: "Which is a noun?",
+    options: ["Water", "Run", "Sing", "Loud"],
+    answerIndex: 0,
+    explanation: "'Water' adalah benda (noun)."
+  },
+  {
+    type: "choice",
+    question: "Which word is a noun?",
+    options: ["House", "Blue", "Sleep", "Enjoy"],
+    answerIndex: 0,
+    explanation: "'House' adalah benda/tempat."
+  },
+  {
+    type: "choice",
+    question: "Which is a noun?",
+    options: ["Bag", "Run", "Laugh", "Loud"],
+    answerIndex: 0,
+    explanation: "'Bag' adalah benda (noun)."
+  },
+  {
+    type: "choice",
+    question: "Which is a noun?",
+    options: ["Cat", "Jump", "Fast", "Big"],
+    answerIndex: 0,
+    explanation: "'Cat' adalah kata benda."
+  },
+  {
+    type: "choice",
+    question: "Which word is a noun?",
+    options: ["River", "Run", "Loud", "Happy"],
+    answerIndex: 0,
+    explanation: "'River' adalah benda/tempat (noun)."
+  },
+    {
+    type: "choice",
+    question: "The sky is ____ on a sunny day.",
+    options: ["blue", "green", "black", "brown"],
+    answerIndex: 0,
+    explanation: "Pada hari cerah, langit tampak biru."
+  },
+  {
+    type: "choice",
+    question: "Grass is usually ____.",
+    options: ["green", "pink", "gray", "purple"],
+    answerIndex: 0,
+    explanation: "Rumput biasanya berwarna hijau."
+  },
+  {
+    type: "choice",
+    question: "Milk is ____.",
+    options: ["white", "yellow", "red", "blue"],
+    answerIndex: 0,
+    explanation: "Susu berwarna putih."
+  },
+  {
+    type: "choice",
+    question: "Ripe bananas are ____.",
+    options: ["yellow", "blue", "black", "purple"],
+    answerIndex: 0,
+    explanation: "Pisang matang biasanya kuning."
+  },
+  {
+    type: "choice",
+    question: "Chocolate is ____.",
+    options: ["brown", "orange", "pink", "green"],
+    answerIndex: 0,
+    explanation: "Cokelat berwarna coklat."
+  },
+  {
+    type: "choice",
+    question: "Strawberries are ____.",
+    options: ["red", "blue", "gray", "black"],
+    answerIndex: 0,
+    explanation: "Strawberry berwarna merah."
+  },
+  {
+    type: "choice",
+    question: "Snow is ____.",
+    options: ["white", "green", "orange", "purple"],
+    answerIndex: 0,
+    explanation: "Salju berwarna putih."
+  },
+  {
+    type: "choice",
+    question: "Clouds are often ____.",
+    options: ["white", "black", "pink", "yellow"],
+    answerIndex: 0,
+    explanation: "Awan biasanya tampak putih."
+  },
+  {
+    type: "choice",
+    question: "Oranges are ____.",
+    options: ["orange", "blue", "brown", "gray"],
+    answerIndex: 0,
+    explanation: "Jeruk sesuai namanya, berwarna oranye."
+  },
+  {
+    type: "choice",
+    question: "The ocean can look ____.",
+    options: ["blue", "red", "yellow", "pink"],
+    answerIndex: 0,
+    explanation: "Laut sering tampak biru."
+  },
+  {
+    type: "choice",
+    question: "A fire truck is usually ____.",
+    options: ["red", "green", "purple", "white"],
+    answerIndex: 0,
+    explanation: "Mobil pemadam biasanya berwarna merah."
+  },
+  {
+    type: "choice",
+    question: "Egg yolks are ____.",
+    options: ["yellow", "blue", "black", "gray"],
+    answerIndex: 0,
+    explanation: "Kuning telur berwarna kuning."
+  },
+  {
+    type: "choice",
+    question: "Grapes can be ____.",
+    options: ["purple", "orange", "silver", "gold"],
+    answerIndex: 0,
+    explanation: "Anggur sering berwarna ungu."
+  },
+  {
+    type: "choice",
+    question: "Trees usually have ____ leaves.",
+    options: ["green", "red", "blue", "black"],
+    answerIndex: 0,
+    explanation: "Daun pohon biasanya hijau."
+  },
+  {
+    type: "choice",
+    question: "My Hair is usually ____.",
+    options: ["black", "yellow", "pink", "orange"],
+    answerIndex: 0,
+    explanation: "rambut biasanya berwarna hitam."
+  },
     {
     type: "input",
     question: "My name is ____.",
@@ -1445,7 +2804,6 @@
         ...questionBank.english
       ];
     }
-
     // ==============================
     // STATE & ELEMENTS
     // ==============================
@@ -1855,46 +3213,64 @@
       resultCard.style.display = "block";
 
       const totalQuestions = currentQuestions.length;
-      const correctCount = score / 10;
-      const wrongCount = totalQuestions - correctCount - skippedCount;
-      const percent =
-        totalQuestions > 0
-          ? Math.round((correctCount / totalQuestions) * 100)
-          : 0;
+const correctCount = score / 10; // tetap dipakai untuk hitung benar
+const wrongCount = totalQuestions - correctCount - skippedCount;
 
-      resultScore.textContent = score;
-      resultMaxScore.textContent = totalQuestions * 10;
+// Nilai akhir = (benar / total) × 100
+const percent = Math.round((correctCount / totalQuestions) * 100);
+
+// score akhir bukan XP lagi, tapi nilai 0–100
+const finalScore = percent;
+
+
+      resultScore.textContent = finalScore;   // nilai akhir 0–100
+      resultMaxScore.textContent = "100";    // total selalu 100
       resultCorrect.textContent = correctCount;
       resultWrong.textContent = wrongCount;
       resultSkipped.textContent = skippedCount;
-      resultPercent.textContent = percent + "%";
+      resultPercent.textContent = finalScore + "%";
 
-      if (percent === 100) {
-        emojiResult.textContent = "🌟";
-        resultTitle.textContent = "Perfect! Math & Science Hero! 🔥";
-        resultMessage.textContent =
-          "Semua soal benar! Ulangi atau naikkan jumlah soalnya untuk tantangan baru.";
-      } else if (percent >= 80) {
-        emojiResult.textContent = "🏆";
-        resultTitle.textContent = "Keren banget! 💪";
-        resultMessage.textContent =
-          "Nilaimu sudah tinggi. Coba cek lagi soal-soal yang masih salah, ya.";
-      } else if (percent >= 50) {
-        emojiResult.textContent = "🚀";
-        resultTitle.textContent = "Lumayan, kita push lagi!";
-        resultMessage.textContent =
-          "Belajar itu pelan-pelan tapi rutin. Ulangi sesi ini supaya makin kuat.";
+      let title, msg, emoji;
+      if (finalScore === 100) {
+        emoji = "🌟";
+        title = "Perfect! Juara banget, Fabian! 🔥";
+        msg = "Semua soal benar! Ulangi atau naikkan jumlah soalnya untuk tantangan baru.";
+      } else if (finalScore >= 80) {
+        emoji = "🏆";
+        title = "Keren banget! 💪";
+        msg = "Nilaimu sudah tinggi. Coba cek lagi soal-soal yang masih salah, ya.";
+      } else if (finalScore >= 50) {
+        emoji = "🚀";
+        title = "Lumayan, kita push lagi!";
+        msg = "Belajar itu pelan-pelan tapi rutin. Ulangi sesi ini supaya makin kuat.";
       } else {
-        emojiResult.textContent = "🌱";
-        resultTitle.textContent = "Awal yang bagus untuk mulai! 🙂";
-        resultMessage.textContent =
-          "Tidak apa-apa kalau masih banyak salah. Kita bisa mulai dari materi mudah dulu.";
+        emoji = "🌱";
+        title = "Ayo kita mulai dari dasar lagi 😉";
+        msg = "Tidak apa-apa kalau masih banyak salah. Kita bisa mulai dari materi mudah dulu.";
       }
+
+      emojiResult.textContent = emoji;
+      resultTitle.textContent = title;
+      resultMessage.textContent = msg;
+
+      // Update modal
+      modalEmoji.textContent = emoji;
+      modalScore.innerHTML = finalScore;
+      modalMessageShort.textContent = title;
+      modalCorrect.textContent = correctCount;
+      modalWrong.textContent = wrongCount;
+      modalSkipped.textContent = skippedCount;
+
+      // Tampilkan modal
+      quizCard.style.display = "none";
+      resultCard.style.display = "none";
+      resultModal.style.display = "flex";
     }
 
     function resetToStart() {
       quizCard.style.display = "none";
       resultCard.style.display = "none";
+      resultModal.style.display = "none";
       emptyState.style.display = "flex";
     }
 
@@ -1918,6 +3294,7 @@
       nextBtn.disabled = true;
 
       resultCard.style.display = "none";
+      resultModal.style.display = "none";
       quizCard.style.display = "block";
 
       updateProgress();
@@ -1940,6 +3317,9 @@
         }
       });
     });
+
+    modalRetryBtn.addEventListener("click", retrySameQuiz);
+    modalCloseBtn.addEventListener("click", resetToStart);
   </script>
 </body>
 </html>
