@@ -699,6 +699,42 @@
       gap: 8px;
       align-items: center;
     }
+/* Grid untuk pilihan gambar */
+.options.image-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr)); /* 2 kolom */
+  gap: 10px;
+}
+
+/* Tombol pilihan khusus gambar */
+.option-btn.image-option {
+  flex-direction: column;
+  align-items: stretch;
+  padding: 6px;
+}
+
+/* Bungkus gambar */
+.option-img-wrapper {
+  width: 100%;
+  border-radius: 14px;
+  overflow: hidden;
+  background: #e3f2fd;
+}
+
+.option-img-wrapper img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Caption di bawah gambar (optional) */
+.option-caption {
+  margin-top: 4px;
+  font-size: 11px;
+  font-weight: 700;
+  color: #1565c0;
+  text-align: center;
+}
 
     button.secondary {
       border-radius: 999px;
@@ -972,8 +1008,7 @@
           <div class="controls-pill">
             <label for="questionCountSelect">Questions</label>
             <select id="questionCountSelect">
-              <option value="15" selected>15 (Standard)</option>
-              <option value="20">20 (Challenge)</option>
+              <option value="30" selected>30</option>
             </select>
           </div>
         </section>
@@ -1136,8 +1171,607 @@
     // ==============================
     const questionBank = {
       math: [
+
       ],
       science: [
+    {
+    type: "input",
+    question: "What part of the plant is this?",
+    image: "https://raw.githubusercontent.com/andyandriadoria/FabianBits/main/leaf.png",
+    correctAnswers: ["leaf", "Leaf"],
+    explanation: ""
+  },
+  {
+    type: "input",
+    question: "What does he do?",
+    image: "https://raw.githubusercontent.com/andyandriadoria/FabianBits/main/push.png",
+    correctAnswers: ["push", "Push"],
+    explanation: ""
+  },
+  {
+    type: "input",
+    question: "What part of the plant is this?",
+    image: "https://raw.githubusercontent.com/andyandriadoria/FabianBits/main/stem.png",
+    correctAnswers: ["stem", "Stem"],
+    explanation: ""
+  },
+      {
+    type: "input",
+    question: "What part of the plant is this?",
+    image: "https://raw.githubusercontent.com/andyandriadoria/FabianBits/main/root.png",
+    correctAnswers: ["root", "Root"],
+    explanation: ""
+  },
+  {
+    type: "input",
+    question: "What part of the plant is this?",
+    image: "https://raw.githubusercontent.com/andyandriadoria/FabianBits/main/root2.png",
+    correctAnswers: ["root", "Root"],
+    explanation: ""
+  },
+      {
+    type: "input",
+    question: "What part of the plant is this?",
+    image: "https://raw.githubusercontent.com/andyandriadoria/FabianBits/main/flower.png",
+    correctAnswers: ["flower", "Flower"],
+    explanation: ""
+  },
+{
+  type: "choiceImage",
+  question: "Which animals has feathers?",
+  options: [
+    {
+      image: "https://raw.githubusercontent.com/andyandriadoria/FabianBits/main/bird.png",
+      caption: ""
+    },
+    {
+      image: "https://raw.githubusercontent.com/andyandriadoria/FabianBits/main/cat.png",
+      caption: ""
+    },
+    {
+      image: "https://raw.githubusercontent.com/andyandriadoria/FabianBits/main/horse.png",
+      caption: ""
+    },
+    {
+      image: "https://raw.githubusercontent.com/andyandriadoria/FabianBits/main/komodo.png",
+      caption: ""
+    }
+  ],
+  answerIndex: 0,
+  explanation: ""
+},
+{
+  type: "choiceImage",
+  question: "Which frog is walking?",
+  options: [
+    {
+      image: "https://raw.githubusercontent.com/andyandriadoria/FabianBits/main/froggantung1.png",
+      caption: ""
+    },
+    {
+      image: "https://raw.githubusercontent.com/andyandriadoria/FabianBits/main/froggantung2.png",
+      caption: ""
+    },
+    {
+      image: "https://raw.githubusercontent.com/andyandriadoria/FabianBits/main/frogrendem.png",
+      caption: ""
+    },
+    {
+      image: "https://raw.githubusercontent.com/andyandriadoria/FabianBits/main/frogwalking.png",
+      caption: ""
+    }
+  ],
+  answerIndex: 3,
+  explanation: ""
+},
+{
+  type: "choiceImage",
+  question: "Which animals are included in mammal group?",
+  options: [
+    {
+      image: "https://raw.githubusercontent.com/andyandriadoria/FabianBits/main/turtle.png",
+      caption: ""
+    },
+    {
+      image: "https://raw.githubusercontent.com/andyandriadoria/FabianBits/main/owl.png",
+      caption: ""
+    },
+    {
+      image: "https://raw.githubusercontent.com/andyandriadoria/FabianBits/main/frog.png",
+      caption: ""
+    },
+    {
+      image: "https://raw.githubusercontent.com/andyandriadoria/FabianBits/main/bear.jpg",
+      caption: ""
+    }
+  ],
+  answerIndex: 3,
+  explanation: ""
+},
+{
+  type: "choiceImage",
+  question: "Which animals has fur?",
+  options: [
+    {
+      image: "https://raw.githubusercontent.com/andyandriadoria/FabianBits/main/frog.png",
+      caption: ""
+    },
+    {
+      image: "https://raw.githubusercontent.com/andyandriadoria/FabianBits/main/komodo.png",
+      caption: ""
+    },
+    {
+      image: "https://raw.githubusercontent.com/andyandriadoria/FabianBits/main/rabbit.png",
+      caption: ""
+    },
+    {
+      image: "https://raw.githubusercontent.com/andyandriadoria/FabianBits/main/turtle.png",
+      caption: ""
+    }
+  ],
+  answerIndex: 2,
+  explanation: ""
+},
+{
+  type: "choiceImage",
+  question: "Which animals is the same group with this animal?",
+  image: "https://raw.githubusercontent.com/andyandriadoria/FabianBits/main/turtle.png",
+  options: [
+    {
+      image: "https://raw.githubusercontent.com/andyandriadoria/FabianBits/main/bird.png",
+      caption: ""
+    },
+    {
+      image: "https://raw.githubusercontent.com/andyandriadoria/FabianBits/main/iguana.png",
+      caption: ""
+    },
+    {
+      image: "https://raw.githubusercontent.com/andyandriadoria/FabianBits/main/monkey.png",
+      caption: ""
+    },
+    {
+      image: "https://raw.githubusercontent.com/andyandriadoria/FabianBits/main/chicken.jpg",
+      caption: ""
+    }
+  ],
+  answerIndex: 1,
+  explanation: ""
+},
+{
+  type: "choiceImage",
+  question: "Which box will move the same way as the arrow below?",
+  image: "https://raw.githubusercontent.com/andyandriadoria/FabianBits/main/left.png",
+  options: [
+    {
+      image: "https://raw.githubusercontent.com/andyandriadoria/FabianBits/main/box1.png",
+      caption: ""
+    },
+    {
+      image: "https://raw.githubusercontent.com/andyandriadoria/FabianBits/main/box2.png",
+      caption: ""
+    },
+    {
+      image: "https://raw.githubusercontent.com/andyandriadoria/FabianBits/main/box3.png",
+      caption: ""
+    },
+    {
+      image: "https://raw.githubusercontent.com/andyandriadoria/FabianBits/main/box4.jpg",
+      caption: ""
+    }
+  ],
+  answerIndex: 2,
+  explanation: ""
+},
+{
+  type: "choiceImage",
+  question: "What this animal eats?",
+  image: "https://raw.githubusercontent.com/andyandriadoria/FabianBits/main/rabbit.png",
+  options: [
+    {
+      image: "https://raw.githubusercontent.com/andyandriadoria/FabianBits/main/meat.png",
+      caption: ""
+    },
+    {
+      image: "https://raw.githubusercontent.com/andyandriadoria/FabianBits/main/grapes.png",
+      caption: ""
+    },
+    {
+      image: "https://raw.githubusercontent.com/andyandriadoria/FabianBits/main/vegie.png",
+      caption: ""
+    },
+    {
+      image: "https://raw.githubusercontent.com/andyandriadoria/FabianBits/main/sunflower.jpg",
+      caption: ""
+    }
+  ],
+  answerIndex: 2,
+  explanation: ""
+},
+{
+  type: "choiceImage",
+  question: "Which animals is the same group with this animal?",
+  image: "https://raw.githubusercontent.com/andyandriadoria/FabianBits/main/rabbit.png",
+  options: [
+    {
+      image: "https://raw.githubusercontent.com/andyandriadoria/FabianBits/main/fish.png",
+      caption: ""
+    },
+    {
+      image: "https://raw.githubusercontent.com/andyandriadoria/FabianBits/main/chicken.png",
+      caption: ""
+    },
+    {
+      image: "https://raw.githubusercontent.com/andyandriadoria/FabianBits/main/owl.png",
+      caption: ""
+    },
+    {
+      image: "https://raw.githubusercontent.com/andyandriadoria/FabianBits/main/elephant.jpg",
+      caption: ""
+    }
+  ],
+  answerIndex: 3,
+  explanation: ""
+},
+{
+  type: "choiceImage",
+  question: "Which animals is the same group with this animal?",
+  image: "https://raw.githubusercontent.com/andyandriadoria/FabianBits/main/racoon.png",
+  options: [
+    {
+      image: "https://raw.githubusercontent.com/andyandriadoria/FabianBits/main/fish.png",
+      caption: ""
+    },
+    {
+      image: "https://raw.githubusercontent.com/andyandriadoria/FabianBits/main/chicken.png",
+      caption: ""
+    },
+    {
+      image: "https://raw.githubusercontent.com/andyandriadoria/FabianBits/main/owl.png",
+      caption: ""
+    },
+    {
+      image: "https://raw.githubusercontent.com/andyandriadoria/FabianBits/main/elephant.jpg",
+      caption: ""
+    }
+  ],
+  answerIndex: 3,
+  explanation: ""
+},
+{
+  type: "choiceImage",
+  question: "Which object is smooth?",
+  options: [
+    {
+      image: "https://raw.githubusercontent.com/andyandriadoria/FabianBits/main/smooth1.png",
+      caption: ""
+    },
+    {
+      image: "https://raw.githubusercontent.com/andyandriadoria/FabianBits/main/smooth2.png",
+      caption: ""
+    },
+    {
+      image: "https://raw.githubusercontent.com/andyandriadoria/FabianBits/main/smooth3.png",
+      caption: ""
+    },
+    {
+      image: "https://raw.githubusercontent.com/andyandriadoria/FabianBits/main/smooth4.png",
+      caption: ""
+    }
+  ],
+  answerIndex: 3,
+  explanation: ""
+},
+{
+  type: "choiceImage",
+  question: "Which picture shows a living hazard?",
+  options: [
+    {
+      image: "https://raw.githubusercontent.com/andyandriadoria/FabianBits/main/toy1.png",
+      caption: ""
+    },
+    {
+      image: "https://raw.githubusercontent.com/andyandriadoria/FabianBits/main/toy2.png",
+      caption: ""
+    },
+    {
+      image: "https://raw.githubusercontent.com/andyandriadoria/FabianBits/main/toy3.png",
+      caption: ""
+    },
+    {
+      image: "https://raw.githubusercontent.com/andyandriadoria/FabianBits/main/kadal.png",
+      caption: ""
+    }
+  ],
+  answerIndex: 3,
+  explanation: ""
+},
+{
+  type: "choiceImage",
+  question: "Which chair is hard?",
+  options: [
+    {
+      image: "https://raw.githubusercontent.com/andyandriadoria/FabianBits/main/sofa1.png",
+      caption: ""
+    },
+    {
+      image: "https://raw.githubusercontent.com/andyandriadoria/FabianBits/main/sofa2.png",
+      caption: ""
+    },
+    {
+      image: "https://raw.githubusercontent.com/andyandriadoria/FabianBits/main/sofa3.png",
+      caption: ""
+    },
+    {
+      image: "https://raw.githubusercontent.com/andyandriadoria/FabianBits/main/chair.png",
+      caption: ""
+    }
+  ],
+  answerIndex: 3,
+  explanation: ""
+},
+{
+  type: "choiceImage",
+  question: "Which animal is moving?",
+  options: [
+    {
+      image: "https://raw.githubusercontent.com/andyandriadoria/FabianBits/main/stay1.png",
+      caption: ""
+    },
+    {
+      image: "https://raw.githubusercontent.com/andyandriadoria/FabianBits/main/stay2.png",
+      caption: ""
+    },
+    {
+      image: "https://raw.githubusercontent.com/andyandriadoria/FabianBits/main/moving.png",
+      caption: ""
+    },
+    {
+      image: "https://raw.githubusercontent.com/andyandriadoria/FabianBits/main/stay3.png",
+      caption: ""
+    }
+  ],
+  answerIndex: 2,
+  explanation: ""
+},
+{
+  type: "choice",
+  question: "Which life process is this?",
+  image: "https://raw.githubusercontent.com/andyandriadoria/FabianBits/main/nutrition.png",
+  options: ["Growth", "Excretion", "Nutrition", "Reproduction"],
+  answerIndex: 2,
+  explanation: ""
+},
+{
+  type: "choice",
+  question: "Which life process is this?",
+  image: "https://raw.githubusercontent.com/andyandriadoria/FabianBits/main/growth.png",
+  options: ["Growth", "Feeding", "Movement", "Nutrition"],
+  answerIndex: 0,
+  explanation: ""
+},
+{
+  type: "choice",
+  question: "What animal part is this?",
+  image: "https://raw.githubusercontent.com/andyandriadoria/FabianBits/main/wings.png",
+  options: ["Beak", "Wings", "Leg", "Fur"],
+  answerIndex: 1,
+  explanation: ""
+},
+{
+  type: "choice",
+  question: "What does this picture show?",
+  image: "https://raw.githubusercontent.com/andyandriadoria/FabianBits/main/branches.png",
+  options: ["Fruit", "Seeds", "Bulbs", "Branches"],
+  answerIndex: 3,
+  explanation: ""
+},
+{
+  type: "choice",
+  question: "Which material is used to make key?",
+  image: "https://raw.githubusercontent.com/andyandriadoria/FabianBits/main/key.png",
+  options: ["Fabric", "Metal", "Wood", "Plastic"],
+  answerIndex: 1,
+  explanation: ""
+},
+{
+  type: "choice",
+  question: "What this animal have?",
+  image: "https://raw.githubusercontent.com/andyandriadoria/FabianBits/main/mouse.png",
+  options: ["Fur & Wing", "Scale & Fin", "Fur & Tail", "Fin & Wing"],
+  answerIndex: 2,
+  explanation: ""
+},
+{
+  type: "choice",
+  question: "What animal part of this?",
+  image: "https://raw.githubusercontent.com/andyandriadoria/FabianBits/main/scales.png",
+  options: ["Scales", "Feather", "Beak", "Fin"],
+  answerIndex: 0,
+  explanation: ""
+},
+{
+  type: "choice",
+  question: "What movement of this animal on the picture?",
+  image: "https://raw.githubusercontent.com/andyandriadoria/FabianBits/main/jumping.png",
+  options: ["Walking", "Climbing", "Jumping", "Running"],
+  answerIndex: 2,
+  explanation: ""
+},
+{
+  type: "choice",
+  question: "What movement of this animal on the picture?",
+  image: "https://raw.githubusercontent.com/andyandriadoria/FabianBits/main/climbing.png",
+  options: ["Climbing", "Jumping", "Running", "Walking"],
+  answerIndex: 0,
+  explanation: ""
+},
+{
+  type: "choice",
+  question: "What group is this animal belongs to?",
+  image: "https://raw.githubusercontent.com/andyandriadoria/FabianBits/main/snake.png",
+  options: ["Fish", "Amphibian", "Bird", "Reptile"],
+  answerIndex: 3,
+  explanation: ""
+},
+{
+  type: "choice",
+  question: "Which animal is running?",
+  image: "https://raw.githubusercontent.com/andyandriadoria/FabianBits/main/animal%20walking.png",
+  options: ["1 & 3", "2 & 6", "4 & 5", "2 & 3"],
+  answerIndex: 0,
+  explanation: ""
+},
+{
+  type: "choice",
+  question: "Which animal is walking?",
+  image: "https://raw.githubusercontent.com/andyandriadoria/FabianBits/main/animal%20walking.png",
+  options: ["1 & 3", "2 & 6", "4 & 5", "2 & 3"],
+  answerIndex: 1,
+  explanation: ""
+},
+{
+  type: "choice",
+  question: "How will this animal change as it grows older?",
+  image: "https://raw.githubusercontent.com/andyandriadoria/FabianBits/main/kittenmilk.png",
+  options: ["It will grow more legs", "It will start to live in water", "It will grow bigger", "It will drink milk"],
+  answerIndex: 2,
+  explanation: ""
+},
+{
+  type: "choice",
+  question: "What movement of this animal on the picture?",
+  image: "https://raw.githubusercontent.com/andyandriadoria/FabianBits/main/untarunning.png",
+  options: ["Climbing", "Running", "Jumping", "Walking"],
+  answerIndex: 1,
+  explanation: ""
+},
+{
+  type: "choice",
+  question: "what group is this animal belongs to?",
+  image: "https://raw.githubusercontent.com/andyandriadoria/FabianBits/main/burungunta.png",
+  options: ["Amphibian", "Bird", "Fish", "Reptile"],
+  answerIndex: 1,
+  explanation: ""
+},
+{
+  type: "choice",
+  question: "Look at the picture. What adult animal will this young animal grow into?",
+  image: "https://raw.githubusercontent.com/andyandriadoria/FabianBits/main/tadpole.png",
+  options: ["Frog", "Duck", "Lizard", "Fish"],
+  answerIndex: 0,
+  explanation: "Gambar tersebut adalah tadpole. Tadpole akan tumbuh menjadi frog (katak)."
+},
+{
+  type: "choice",
+  question: "Look at the picture. A calf grows into a ____.",
+  image: "https://raw.githubusercontent.com/andyandriadoria/FabianBits/main/calf.png",
+  options: ["Goat", "Sheep", "Cow", "Horse"],
+  answerIndex: 2,
+  explanation: "Calf adalah anak sapi. Saat dewasa menjadi cow (sapi)."
+},
+{
+  type: "choice",
+  question: "Look at the picture. This cub will grow into a ____.",
+  image: "https://raw.githubusercontent.com/andyandriadoria/FabianBits/main/cub.png",
+  options: ["Tiger", "Lion", "Panther", "Cheetah"],
+  answerIndex: 1,
+  explanation: "Cub pada gambar adalah anak singa. Ketika dewasa menjadi lion (singa)."
+},
+{
+  type: "choice",
+  question: "Sunflower is a ____.",
+  image: "https://raw.githubusercontent.com/andyandriadoria/FabianBits/main/sunflower.png",
+  options: ["living things", "non-living thins", "plant", "animal"],
+  answerIndex: 0,
+  explanation: ""
+},
+{
+  type: "choice",
+  question: "All living things need ____.",
+  options: ["plant", "food", "animal", "go"],
+  answerIndex: 1,
+  explanation: ""
+},
+{
+  type: "choice",
+  question: "When the plant get bigger, it means they ____.",
+  options: ["grow", "drink", "eat", "happy"],
+  answerIndex: 0,
+  explanation: ""
+},
+{
+  type: "choice",
+  question: "The plants need ____ to grow.",
+  options: ["animal", "fruit", "light", "sleep"],
+  answerIndex: 2,
+  explanation: ""
+},
+{
+  type: "choice",
+  question: "Sun is a ____.",
+  image: "https://raw.githubusercontent.com/andyandriadoria/FabianBits/main/sun.png",
+  options: ["living things", "non-living thins", "plant", "animal"],
+  answerIndex: 1,
+  explanation: ""
+},
+{
+  type: "choice",
+  question: "Look at the picture. A kitten grows into a ____.",
+  image: "https://raw.githubusercontent.com/andyandriadoria/FabianBits/main/kitten.png",
+  options: ["Dog", "Rabbit", "Cat", "Chicken"],
+  answerIndex: 2,
+  explanation: "Kitten adalah anak kucing, tumbuh menjadi cat (kucing)."
+},
+{
+  type: "choice",
+  question: "Look at the picture. This chick will grow into a ____.",
+  image: "https://raw.githubusercontent.com/andyandriadoria/FabianBits/main/chick.png",  
+  options: ["Duck", "Chicken", "Turkey", "Swan"],
+  answerIndex: 1,
+  explanation: "Chick (anak ayam) tumbuh menjadi chicken (ayam)."
+},
+{
+  type: "choice",
+  question: "Look at the picture. What is the young animal of this adult?",
+  image: "https://raw.githubusercontent.com/andyandriadoria/FabianBits/main/frog.png",  
+  options: ["Puppy", "Tadpole", "Kitten", "Calf"],
+  answerIndex: 1,
+  explanation: "Gambar tersebut adalah frog dewasa. Anak katak disebut tadpole."
+},
+{
+  type: "choice",
+  question: "Look at the picture. What is the young animal of this adult cow?",
+  image: "https://raw.githubusercontent.com/andyandriadoria/FabianBits/main/cow.png",  
+  options: ["Chick", "Cub", "Calf", "Foal"],
+  answerIndex: 2,
+  explanation: "Cow (sapi dewasa) memiliki anak yang disebut calf."
+},
+{
+  type: "choice",
+  question: "Look at the picture. What is the correct young animal?",
+  image: "https://raw.githubusercontent.com/andyandriadoria/FabianBits/main/lion.png",  
+  options: ["Cub", "Chick", "Puppy", "Fry"],
+  answerIndex: 0,
+  explanation: "Lion dewasa memiliki anak yang disebut cub."
+},
+{
+  type: "choice",
+  question: "Look at the picture. What is the young animal of a cat?",
+  image: "https://raw.githubusercontent.com/andyandriadoria/FabianBits/main/cat.png",  
+  options: ["Kitten", "Foal", "Calf", "Duckling"],
+  answerIndex: 0,
+  explanation: "Cat (kucing dewasa) memiliki anak yang disebut kitten."
+},
+{
+  type: "choice",
+  question: "Look at the picture. What is the young animal of a chicken?",
+  image: "https://raw.githubusercontent.com/andyandriadoria/FabianBits/main/chicken.png",  
+  options: ["Chick", "Puppy", "Cub", "Froglet"],
+  answerIndex: 0,
+  explanation: "Chicken (ayam dewasa) memiliki anak yang disebut chick."
+}
+
+
       ],
       english: [
     // Q1 - Fruit & food
@@ -2953,7 +3587,7 @@
 
       questionText.textContent = q.question;
 
-      // Gambar soal
+      // Gambar soal utama
       if (q.image) {
         questionImageContainer.innerHTML =
           '<img src="' + q.image + '" alt="Question image" />';
@@ -2966,10 +3600,13 @@
       // reset containers
       optionsContainer.innerHTML = "";
       optionsContainer.style.display = "none";
+      optionsContainer.classList.remove("image-grid");
       inputContainer.style.display = "none";
 
       if (type === "choice") {
         renderChoiceQuestion(q);
+      } else if (type === "choiceImage") {
+        renderImageChoiceQuestion(q);
       } else if (type === "input" || type === "input3") {
         renderInputQuestion(q);
       }
@@ -2992,14 +3629,40 @@
       });
     }
 
+    // PILIHAN GAMBAR
+    function renderImageChoiceQuestion(q) {
+      optionsContainer.style.display = "grid";
+      optionsContainer.classList.add("image-grid");
+      optionsContainer.innerHTML = "";
+
+      q.options.forEach((opt, index) => {
+        const btn = document.createElement("button");
+        btn.className = "option-btn image-option";
+
+        btn.innerHTML = `
+          <div class="option-img-wrapper">
+            <img src="${opt.image}" alt="Option ${index + 1}">
+          </div>
+          ${
+            opt.caption
+              ? `<div class="option-caption">${opt.caption}</div>`
+              : ""
+          }
+        `;
+
+        btn.addEventListener("click", () => handleOptionClick(index));
+        optionsContainer.appendChild(btn);
+      });
+    }
+
     function renderInputQuestion(q) {
       inputContainer.style.display = "flex";
 
       const isTriple = q.type === "input3";
 
       // label (bisa custom via q.labels)
-      const labels = q.labels || (isTriple ? ["X", "Y", "Z"] : ["Answer", "Y", "Z"]);
-      label1.textContent = labels[0] || (isTriple ? "X" : "Answer");
+      const labels = q.labels || (isTriple ? ["X", "Y", "Z"] : ["Jawaban", "Y", "Z"]);
+      label1.textContent = labels[0] || (isTriple ? "X" : "Jawaban");
       label2.textContent = labels[1] || "Y";
       label3.textContent = labels[2] || "Z";
 
