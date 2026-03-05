@@ -4066,7 +4066,7 @@ explanation:"Ucapan syukur adalah Alhamdulillah."
       // generate 4 unique numbers 0–9
       mgNumbers = [];
       while (mgNumbers.length < 4) {
-        const n = randomInt(1, 19);
+        const n = randomInt(0, 9);
         if (!mgNumbers.includes(n)) mgNumbers.push(n);
       }
 
@@ -4096,7 +4096,7 @@ explanation:"Ucapan syukur adalah Alhamdulillah."
       const optSet = new Set();
       optSet.add(mgCorrectNumber);
       while (optSet.size < 4) {
-        const n = randomInt(1, 9);
+        const n = randomInt(0, 9);
         if (!optSet.has(n)) optSet.add(n);
       }
       const options = shuffleArray(Array.from(optSet));
