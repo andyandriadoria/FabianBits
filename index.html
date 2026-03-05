@@ -1542,7 +1542,7 @@
     <!-- TOP BAR -->
     <header class="top-bar">
       <div class="brand">
-        <div class="brand-logo">U</div>
+        <div class="brand-logo">F</div>
         <div class="brand-name">FabianBits</div>
       </div>
       <nav class="top-nav">
@@ -1556,10 +1556,10 @@
       <!-- SIDEBAR -->
       <aside class="side-menu">
         <section class="profile-card">
-          <div class="profile-avatar">🤖</div>
+          <div class="profile-avatar">👷‍♂️</div>
           <div class="profile-info">
             <h2>Fabian Syamil Aqlandrias</h2>
-            <p>Grade 6 • Daily Practice</p>
+            <p>Grade 1 • Daily Practice</p>
           </div>
           <div class="xp-badge">
           <div class="xp-main">
@@ -3867,27 +3867,27 @@ explanation:"Ucapan syukur adalah Alhamdulillah."
 
       switch (op) {
         case "+":
-          a = randomInt(1, 50);
-          b = randomInt(1, 50);
+          a = randomInt(1, 9);
+          b = randomInt(1, 9);
           answer = a + b;
           question = `${a} + ${b} = ?`;
           break;
         case "-":
-          a = randomInt(1, 50);
-          b = randomInt(1, 50);
+          a = randomInt(1, 9);
+          b = randomInt(1, 9);
           if (b > a) [a, b] = [b, a];
           answer = a - b;
           question = `${a} - ${b} = ?`;
           break;
         case "×":
-          a = randomInt(2, 12);
-          b = randomInt(2, 12);
+          a = randomInt(2, 9);
+          b = randomInt(2, 9);
           answer = a * b;
           question = `${a} × ${b} = ?`;
           break;
         case "÷":
-          b = randomInt(2, 12);
-          const q = randomInt(2, 12);
+          b = randomInt(2, 9);
+          const q = randomInt(2, 9);
           a = b * q;
           answer = q;
           question = `${a} ÷ ${b} = ?`;
@@ -4063,7 +4063,7 @@ explanation:"Ucapan syukur adalah Alhamdulillah."
       mgFeedback.className = "sm-feedback";
       mgQuestion.textContent = "Hafalkan posisi angkanya...";
 
-      // generate 4 unique numbers 10–99
+      // generate 4 unique numbers 0–9
       mgNumbers = [];
       while (mgNumbers.length < 4) {
         const n = randomInt(1, 19);
@@ -4096,7 +4096,7 @@ explanation:"Ucapan syukur adalah Alhamdulillah."
       const optSet = new Set();
       optSet.add(mgCorrectNumber);
       while (optSet.size < 4) {
-        const n = randomInt(1, 19);
+        const n = randomInt(1, 9);
         if (!optSet.has(n)) optSet.add(n);
       }
       const options = shuffleArray(Array.from(optSet));
